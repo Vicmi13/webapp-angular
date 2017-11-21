@@ -1,0 +1,29 @@
+<h3>
+  {{ titulo }}
+</h3>
+
+<form #formProducto="ngForm" (submit)="(onSubmit())" class="col-xl-6" id="form-producto">
+    <label> 
+      Usuario: 
+      <span *ngIf="!user.valid && user.touched"  class="badge badge-danger">El nombre es obligatorio</span>
+    </label>
+    <input type="text" #user="ngModel" name="user" [(ngModel)]="producto.user" class="form-control" required />
+    
+    <label> 
+      Titulo: 
+        <span *ngIf="!title.valid && title.touched" class="badge badge-danger">El titulo es obligatorio</span>
+    </label>
+    <input type="text" #title="ngModel" name="title" [(ngModel)]="producto.title" class="form-control" required/>
+
+    
+    <label> 
+        Cuerpo: 
+        <span *ngIf="!body.valid && body.touched" class="badge badge-danger">El cuerpo es obligatorio</span>
+    </label>
+    <input type="text" #body="ngModel" name="body" [(ngModel)]="producto.body" class="form-control" required/>
+
+    <input type="submit"  value="{{ titulo }}" [disabled]="!formProducto.form.valid" class="btn btn-success"/>
+</form>
+
+
+

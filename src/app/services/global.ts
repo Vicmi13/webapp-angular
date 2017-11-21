@@ -1,4 +1,4 @@
 export var GLOBAL = {
-    url: "https://swapi.co/api/",
+    url: "https://jsonplaceholder.typicode.com/posts", 
     header_color: '#E03137'
 }

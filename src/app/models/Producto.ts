@@ -1,3 +1,3 @@
 export class Producto {
-    constructor(public name : string, public url:string, public films: Array<any> ){}
+    constructor(public user : string, public title:string, public body: string ){}
 }
